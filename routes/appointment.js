@@ -12,7 +12,7 @@ router.post('/create/appointment', isAuth,
     validator.body('appointmentDate').trim().not().isEmpty().withMessage('Appintment Date can not be blank'),
 ], appointmentController.createAppointment);
 
-router.get('/appointment', isAuth,
+router.get('/get/appointment', isAuth,
 [
     validator.body('appointmentDate').trim().not().isEmpty().withMessage('Appintment Date can not be blank'),
 ], appointmentController.getAppointment);
